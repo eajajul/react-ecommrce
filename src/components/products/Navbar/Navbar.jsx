@@ -3,9 +3,6 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Badge,
-  MenuItem,
-  Menu,
   Typography,
 } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
@@ -18,6 +15,9 @@ const useStyles = makeStyles({
     nav: {
         marginBottom: '1rem',
     },
+    cart:{
+      flexGrow: 1
+    }
 });
 
 const Navbar = () => {
@@ -29,7 +29,10 @@ const Navbar = () => {
           <IconButton edge="start" color="inherit" aria-label="menu">
             <Typography variant="h6">Ecommerce</Typography>
           </IconButton>
-          <ShoppingCart/>
+          <Typography variant="h6" className={classes.cart}>
+            News
+          </Typography>
+          <ShoppingCart />
         </Toolbar>
       </AppBar>
     </div>
